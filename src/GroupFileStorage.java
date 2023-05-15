@@ -1,8 +1,7 @@
 import java.io.*;
 
 public class GroupFileStorage {
-
-    public static void groupToCSV(Group gr, String fileName) throws IOException {
+    public static void saveGroupToCSV(Group gr, String fileName) throws IOException {
         File file = new File(fileName);
         try (PrintWriter s1 = new PrintWriter(file)) {
             Student[] students = gr.getStudents();

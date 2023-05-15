@@ -1,8 +1,9 @@
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Comparator;
 
 public class Main {
-    public static void main(String[] args) throws GroupOverflowException {
+    public static void main(String[] args) throws GroupOverflowException, IOException {
         Student st1 = new Student("Ivan", "Ivanov", Genders.MALE, 34, "group Java");
         Student st2 = new Student("Petr", "Petrov", Genders.MALE, 23, "group Java");
         Student st3 = new Student("Misha", "Mishkin", Genders.MALE, 28, "group Java");
@@ -36,6 +37,11 @@ public class Main {
         Input input = new Input();
         group.addStudent(input.newStudent());
         System.out.println(group.toString());
+
+        GroupFileStorage groupStorage = new GroupFileStorage();
+        groupStorage.saveGroupToCSV(group,"GROUP1.csv");
+
+
 
 
 

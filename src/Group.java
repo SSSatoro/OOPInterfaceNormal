@@ -16,8 +16,6 @@ public class Group {
     public void setStudents(Student[] students2) {
     }
 
-
-
     public void addStudent(Student student) throws GroupOverflowException {
         for (int i = 0; i < students.length; i++) {
             if (students[i] == null) {
