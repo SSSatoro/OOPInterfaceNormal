@@ -9,6 +9,14 @@ public class Group {
         super();
         students = new Student[10];
     }
+    public Student[] getStudents() {
+        return students;
+    }
+
+    public void setStudents(Student[] students2) {
+    }
+
+
 
     public void addStudent(Student student) throws GroupOverflowException {
         for (int i = 0; i < students.length; i++) {
@@ -62,6 +70,7 @@ public class Group {
         return "Group [groupName=" + groupName + ", students=" + Arrays.toString(students) + "]";
 
     }
+
 
 
 }
